@@ -1,0 +1,12 @@
+<h1>ToDo</h1>
+<%= form_with model: @list, url: '/lists', local:true do |f| %>
+    <h4>title</h4>
+    <%= f.text_field :title %>
+    <h4>to do</h4>
+    <%= f.text_area :tetxt %>
+    <%= f.submit 'submit' %>
+<% end %>
+
+
+    
+
