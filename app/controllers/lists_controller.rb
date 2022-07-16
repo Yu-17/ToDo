@@ -10,10 +10,15 @@ class ListsController < ApplicationController
   end
 
   def index
-    @list = List.all.order(created_at: 'desc')
+    @lists = List.all
 
 
   end
+
+  def show
+    @list = List.find(params[:id])
+  end
+
 
   private
   def list_params
