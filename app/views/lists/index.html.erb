@@ -1,5 +1,6 @@
 <h1>ToDo一覧</h1>
 <% @lists.each do |list| %>
-  <%= link_to list.title, list_path(list) %>
-  <span><%= list.title %></span>
+<p>title</p>
+<%= link_to list.title, list_path(list) %>
+    
 <% end %>

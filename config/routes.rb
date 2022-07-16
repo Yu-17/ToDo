@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # get 'lists/new'
   # root 'top#index'
   # post 'lists' => 'lists#create'
