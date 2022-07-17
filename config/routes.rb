@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  # get 'lists/new'
-  # root 'top#index'
-  # post 'lists' => 'lists#create'
-  # get 'top' => 'top#index'
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
   root 'top#index'
+  
   resources :lists
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

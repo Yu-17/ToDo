@@ -1,7 +1,6 @@
 <h2>ToDo</h2>
 <p><%= @list.title %></p>
 <h2>Doing</h2>
-<p><%= @list.body %></p>
 <%= link_to '編集する', edit_list_path(@list.id) %><br>
 <%= link_to '削除する', list_path(@list.id), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %><br>
 <%= link_to '投稿一覧ページへ', lists_path %>
