@@ -71,3 +71,20 @@ group :test do
 end
 
 gem 'devise'
+
+
+group :development do
+  gem 'sqlite3(mysql)'
+end
+
+group :production do
+  gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3(mysql)'
+end
+
+group :production do
+  gem 'pg'
+end
