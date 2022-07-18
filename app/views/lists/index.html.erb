@@ -3,6 +3,5 @@
 <p>title</p>
 <%= link_to list.title, list_path(list) %>
 <p>time</p>
-<%= list.created_at.strftime('%Y/%m/%d %H:%M') %>
-    
+<%= list.created_at.to_s(:datetime_jp) %>
 <% end %>

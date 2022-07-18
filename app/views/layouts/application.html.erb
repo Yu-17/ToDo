@@ -12,17 +12,22 @@
 
   <% if user_signed_in? %>  
   <header>
+    <div class = "image">
+    
+
     <div class="container">
+    <%= link_to "トップ", root_path %>
+    <%= link_to "投稿する", new_list_path %>
+    <%= link_to "投稿一覧", lists_path %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> 
     <h1><%= link_to image_tag('logo.png.jpg', class: 'logo'), root_path %></h1>
     </div>
     
-    <div><%= link_to "トップ", root_path, class: "text-white" %></div>
-    <div><%= link_to "投稿する", new_list_path, class: "text-white" %></div>
-    <div><%= link_to "投稿一覧", lists_path, class: "text-white" %></div>
-    <div><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-white" %></div> 
+    
   </header>
   <% end %> 
   <body>
+  
   <%= yield %>
   
 
