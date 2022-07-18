@@ -2,5 +2,7 @@
 <% @lists.each do |list| %>
 <p>title</p>
 <%= link_to list.title, list_path(list) %>
+<p>time</p>
+<%= list.created_at.strftime('%Y/%m/%d %H:%M') %>
     
 <% end %>

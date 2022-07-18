@@ -1,17 +1,17 @@
 class ListsController < ApplicationController
   def new
     @list = List.new
+    
   end
 
   def create
     list = List.new(list_params)
-
     list.save
     redirect_to list_path(list.id)
   end
 
   def index
-    @lists = List.all
+    @lists = List.all.order("id DESC")
   end
 
   def show
